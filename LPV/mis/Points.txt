@@ -1,0 +1,29 @@
+1. In C++, #pragma is a preprocessor directive that provides instructions to the compiler or controls certain aspects of the compilation process. It is typically used to enable or disable specific compiler features or optimizations, or to provide hints or directives for specific compiler behavior.
+
+*****************************************************************************************************************************
+Here are some commonly used `#pragma` directives in OpenMP (OMP) programming:
+
+1. `#pragma omp parallel`: Specifies that the following block of code should be executed in parallel by multiple threads.
+
+2. `#pragma omp for`: Indicates that the following for loop should be divided among the available threads, with each thread executing a portion of the iterations.
+
+3. `#pragma omp sections`: Specifies that the enclosed block should be divided into sections, with each section executed by a different thread.
+
+4. `#pragma omp single`: Ensures that the enclosed block of code is executed by a single thread, typically the master thread.
+
+5. `#pragma omp task`: Specifies that the following block of code should be executed as a separate task, which can be executed asynchronously by any available thread.
+
+6. `#pragma omp barrier`: Inserts a synchronization point, ensuring that all threads reach the barrier before continuing execution.
+
+7. `#pragma omp critical`: Specifies that the enclosed block of code should be executed as a critical section, where only one thread can execute it at a time.
+
+8. `#pragma omp atomic`: Specifies that the enclosed statement should be executed atomically, ensuring that concurrent accesses to the shared variable are serialized.
+
+9. `#pragma omp reduction`: Performs a reduction operation on a shared variable across multiple threads, combining the partial results to obtain a final result.
+
+These are just a few examples of commonly used `#pragma` directives in OpenMP. OpenMP provides a rich set of directives that enable programmers to express parallelism and control the behavior of parallel execution. The choice of `#pragma` directives depends on the specific requirements of the parallel program and the desired parallelization strategy.
+
+*****************************************************************************************************************************
+To Run The Programs
+// g++ -fopenmp filename.cpp -o <output_filename>
+// ./<output_filename>

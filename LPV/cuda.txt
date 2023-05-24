@@ -1,0 +1,32 @@
+nvcc -V
+cat /etc/*release* 
+uname -a
+clear
+
+ls
+mkdir temp(or temp1)
+cd temp
+cuda installation steps
+
+If fails;
+runtime local
+
+PATH:
+sudo nano /etc/profile.c/cuda.sh
+
+export PATH=/usr/local/cuda-11.2/bin:$PATH
+export CUDADIR=/usr/local/cuda-11.2
+
+ctr + x
+
+sudo nano /etc/ld.so.conf.d/cuda.conf
+
+Right click, split pane vertically
+
+/usr/local/cuda-11.2/lib64
+
+
+sudo ldconfig
+
+ctr + x, ctr + y(save)
+
